@@ -22,7 +22,7 @@ H --> J
 I --> J
 ```
 
-```
+
 ALGORITIMO verifica_par_impar
 DECLARE numero, resto INTEIRO
 ESCREVA "Digite um numero"
