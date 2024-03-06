@@ -22,7 +22,7 @@ H --> J
 I --> J
 ```
 
-
+```
 ALGORITIMO verifica_par_impar
 DECLARE numero, resto INTEIRO
 ESCREVA "Digite um numero"
@@ -36,6 +36,7 @@ SE numero > 0 ENTAO
 SENAO
 	ESCREVA "O numero deve ser positivo"
 FIM_ALGORITIMO
+```
 
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
