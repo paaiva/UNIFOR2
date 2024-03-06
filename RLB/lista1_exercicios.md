@@ -68,3 +68,34 @@ SENAO
 FIM_ALGORITIMO
 	
 ```
+
+
+### exercicio 1 
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética
+entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
+#### Fluxograma
+``` mermaid
+flowchart TD
+A([inicio])-->B{{Digite Nota 1, Nota 2}}
+B-->C[/N1, N2/]
+C-->D[Media == N1 + N2 / 2]
+D-->E{Media>=7}
+E--Sim-->F{{Aprovado!}}
+E--Nao-->G{{Reprovado}}
+
+``` 
+
+```
+ALGORITIMO media_aritimetica
+DECLARE x NUMERICO
+DECLARE y NUMERICO
+ESCREVA "Escreva nota 1 "
+ESCREVA "Escreva nota 2"
+LEIA x
+LEIA  y 
+SE x + y / 2 >= 7
+	ESCREVA "Aprovado!"
+SENAO
+	ESCREVA "Reprovado!"
+FIM_ALGORITIMO
+```
