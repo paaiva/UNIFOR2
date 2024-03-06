@@ -88,7 +88,7 @@ D-->E{Media>=7}
 E--Sim-->F{{Aprovado!}}
 F-->H([FIM])
 E--Nao-->G{{Reprovado}}
-E-->H
+G-->H
 
 ``` 
 
