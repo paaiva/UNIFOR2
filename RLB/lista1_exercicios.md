@@ -31,10 +31,13 @@ SE numero > 0 ENTAO
 	resto = numero % 2
 	SE resto == 0 ENTAO
 		ESCREVA "O numero e par!"
+
 	SENAO
 		ESCREVA "O numero e impar!"
+
 SENAO
 	ESCREVA "O numero deve ser positivo"
+
 FIM_ALGORITIMO
 ```
 
@@ -62,9 +65,11 @@ ESCREVA "Digite sua idade"
 LEIA idade
 SE idade >= 18
 	ESCREVA "Pode tirar CNH!"
+
 SENAO
 	X = 18 - idade
 	ESCREVA "Nao pode tirar CNH! Faltam X anos"
+
 FIM_ALGORITIMO
 	
 ```
@@ -81,7 +86,9 @@ B-->C[/N1, N2/]
 C-->D[Media == N1 + N2 / 2]
 D-->E{Media>=7}
 E--Sim-->F{{Aprovado!}}
+F-->H([FIM])
 E--Nao-->G{{Reprovado}}
+E-->H
 
 ``` 
 
@@ -95,7 +102,43 @@ LEIA x
 LEIA  y 
 SE x + y / 2 >= 7
 	ESCREVA "Aprovado!"
+
 SENAO
 	ESCREVA "Reprovado!"
+
 FIM_ALGORITIMO
 ```
+### exercicio 2
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um
+funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão
+aumento de 20%; os demais terão aumento de 10%.
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite seu salario}}
+B-->C[/Salario/]
+C-->D{Salario <= 500}
+D--Sim-->E[Salario x 1,20]
+E-->F[/Novo salario/]
+F-->G([FIM])
+D--Nao-->H[Salario x 1,10]
+H-->I[/Novo Salario/]
+I-->G
+```
+
+```
+ALGORITIMO novo_salario
+DECLARE salario NUMERICO
+ESCREVA "Digite seu salario"
+LEIA salario
+SE salario <=500
+	novo salario == salario x 1,20
+	ESCREVA "Este e seu novo salario!"
+	
+SENAO
+	novo salario == salario x 1,10
+	ESCREVA "Este e seu novo salario!"
+
+FIM_ALGORITIMO
+```
+
