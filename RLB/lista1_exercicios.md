@@ -42,6 +42,7 @@ FIM_ALGORITIMO
 candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade,
 calcular quantos anos faltam para o candidato estar apto.
 #### Fluxograma
+
 ```mermaid
 flowchart TD
 A([Inicio])-->B{{Digite sua Idade}}
