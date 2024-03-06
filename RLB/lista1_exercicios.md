@@ -76,7 +76,7 @@ entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou 
 #### Fluxograma
 ``` mermaid
 flowchart TD
-A([inicio])-->B{{Digite Nota 1, Nota 2}}
+A([inicio])-->B{{Digite N1, N2}}
 B-->C[/N1, N2/]
 C-->D[Media == N1 + N2 / 2]
 D-->E{Media>=7}
