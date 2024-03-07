@@ -51,9 +51,9 @@ calcular quantos anos faltam para o candidato estar apto.
 flowchart TD
 A([Inicio])-->B{{Digite sua Idade}}
 B-->C{Idade >= 18}
-C--Sim-->D{{Pode tirar CNH!}}
+C--SIM-->D{{Pode tirar CNH!}}
 D-->E([FIM])
-C--Nao-->F[18 - Idade == X]
+C--NAO-->F[18 - Idade == X]
 F-->G{{Nao pode tirar CNH, faltam X anos!}}
 G-->E
 ```
@@ -85,9 +85,9 @@ A([inicio])-->B{{Digite N1, N2}}
 B-->C[/N1, N2/]
 C-->D[Media == N1 + N2 / 2]
 D-->E{Media>=7}
-E--Sim-->F{{Aprovado!}}
+E--SIM-->F{{Aprovado!}}
 F-->H([FIM])
-E--Nao-->G{{Reprovado}}
+E--NAO-->G{{Reprovado}}
 G-->H
 
 ``` 
@@ -118,10 +118,10 @@ flowchart TD
 A([Inicio])-->B{{Digite seu salario}}
 B-->C[/Salario/]
 C-->D{Salario <= 500}
-D--Sim-->E[Salario x 1,20]
+D--SIM-->E[Salario x 1,20]
 E-->F[/Novo salario/]
 F-->G([FIM])
-D--Nao-->H[Salario x 1,10]
+D--NAO-->H[Salario x 1,10]
 H-->I[/Novo Salario/]
 I-->G
 ```
