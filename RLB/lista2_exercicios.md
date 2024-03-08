@@ -30,3 +30,26 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+### exercicio 2 
+Leia uma temperatura dada na escala Celsius (C) e imprima o equivalente em Fahrenheit
+#### Fluxograma 
+``` mermaid 
+flowchart TD 
+A([Inicio])-->B{{Digite o valor em C}}
+B-->C[/C/] 
+C-->D[F== 9/5 * C + 32 ]
+D-->E{{F é o valor convertido a fahrenheit}}
+E-->F([FIM])
+``` 
+``` 
+ALGORITIMO transformar_celsius_em_fahrenheit
+DECLARE c, f NUMERICO
+INICIO
+	ESCREVA "Digite o valor em c"
+	LEIA c
+	f== (9/5) * c + 32 
+	ESCREVA " f é o novo valor em fahrenheit"
+FIM
+FIM_ALGORITIMO
+``` 
+```
