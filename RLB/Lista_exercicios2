@@ -1,1 +1,31 @@
+# Unifor
+## Lista 2 de exercicios 
+### exercicio 1 
+Calcule a média de quatro números inteiros dados.
+#### Fluxograma 
 
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite N1, N2, N3, N4}}
+B-->C[/N1,N2,N3,N4/]
+C-->D[N1 + N2 + N3 + N4 == M]
+D-->E[M / 4 == MT]
+E-->F{{MT é sua media total}}
+F-->G([FIM])
+```
+```
+ALGORITIMO media_4_numeros
+DECLARE n1, n2, n3. n4, media NUMERICOS 
+INICIO
+	ESCREVA "Digite n1"
+	LEIA n1
+	ESCREVA "Digite n2"
+	LEIA n2
+	ESCREVA "Digite n3"
+	LEIA n3
+	ESCREVA "Digite n4"
+	LEIA n4
+	media == (n1 + n2 + n3 + n4) / 4 
+	ESCREVA " media dos números ==M"
+FIM
+FIM_ALGORITIMO
