@@ -74,4 +74,30 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
-		
+### exercício 4
+O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos, ambos aplicados ao custo de fábrica. Supondo que a porcentagem do distribuidor seja de 12% e a dos impostos de 45%, prepare um algoritmo para ler o custo de fábrica do carro e imprimir o custo ao consumidor.
+#### Fluxograma
+```mermaid 
+flowchart TD 
+A([Inicio])-->B{{Digite o custo de fabrica do carro}}
+B-->C[custo de fabrica == C]
+C-->D[PD== C * 0.12]
+D-->E[I == C * 0.45]
+E-->F[CC== I + PD + C]
+F-->G{{O custo ao consumidor e igual a CC}}
+G-->H([FIM])
+```
+´´´
+ALGORITIMO custo_ao_consumidor
+DECLARE i, pd, c ,cc NUMERICOS
+INICIO 
+	ESCREVA "Digite o valor do custo de fabrica do carro"
+	LEIA c 
+	i == c * 0.45 
+	pd ==c *0.12
+	cc ==c +  pd + i
+	ESCREVA "cc e o valor de custo ao consumidor"
+FIM
+FIM_ALGORITIMO
+```
+
