@@ -52,4 +52,26 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ``` 
+### exercício 3
+Leia uma quantidade de chuva dada em polegadas e imprima o equivalente em milímetros
+#### Fluxograma 
+```  mermaid
+flowchart TD 
+A([Inicio])-->B{{Insira a quantidade de chuva em polegadas }}
+B-->C[polegadas == p]
+C-->D[25.4 * P == mm]
+D-->E{{mm é a quantidade em milimetros de chuva}}
+E-->F([FIM])
 ```
+```
+ALGORITIMO polegadas_para_milimetros
+DECLARE polegadas NUMERICO
+INICIO 
+	ESCREVA "insira a quantidade em polegadas"
+	LEIA polegadas 
+	polegadas * 25.4 == NQ
+	ESCREVA "NQ é a quantidade de chuva em milimetros" 
+FIM
+FIM_ALGORITIMO
+```
+		
