@@ -123,5 +123,45 @@ INICIO
 	ESCREVRA "q é igual a n ao quadrado"
 FIM
 FIM_ALGORITIMO
-``` 
+```
+### exercício 6
+O cardápio de uma lanchonete é dado abaixo. Prepare um algoritmo que leia a quantidade de cada item que você consumiu e calcule a conta final. 
+a) Hambúrguer................ R$ 3,00 
+b) Cheeseburger.............. R$ 2,50
+c) Fritas.................... R$ 2,50 
+d) Refrigerante ............. R$ 1,00
+e) Milkshake................. R$ 3,00
+
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Insira a quantidade de hamburger, milkshake, fritas, cheeseburger, refrigerante}}
+B-->C[/H, M, F, C, R/]
+C-->D[conta_final==H*3 + M*3 + F*2.5 + R*1 + C*2.5]
+D-->E{{conta final é igual a conta_final}}
+E-->F([FIM])
+```
+```
+ALGORITIMO cardapio_lanchonete
+DECLARE qh, qc, qf, qr, qm, conta_final NUMERICOS
+INICIO 
+	ESCREVA "Digite a quantidade de hamburger"
+	LEIA qh
+	ESCREVA "Digite a quantidade de refrigerante"
+	LEIA qr
+	ESCREVA "Digite a quantidade de fritas"
+	LEIA qf
+	ESCREVA "Digite a quantidade de milkshake"
+	LEIA qm
+	ESCREVA "Digite a quantidade de cheeseburger"
+	LEIA qc
+	conta_final == (3 * qh) + 
+                   (2.5 *qc) +
+                   (1 *qr) +
+	               (2.5 *qf) +
+	               (3 *qm )  
+	ESCREVA "conta final é igual a conta_final"
+FIM
+FIM_ALGORITIMO
+```
 
