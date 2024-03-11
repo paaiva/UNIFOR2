@@ -156,8 +156,8 @@ INICIO
 	ESCREVA "Digite a quantidade de cheeseburger"
 	LEIA qc
 	conta_final == (3 * qh) + 
-                   (2.5 *qc) +
-                   (1 *qr) +
+                       (2.5 *qc) +
+                       (1 *qr) +
 	               (2.5 *qf) +
 	               (3 *qm )  
 	ESCREVA "conta final é igual a conta_final"
