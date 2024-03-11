@@ -87,7 +87,7 @@ E-->F[CC== I + PD + C]
 F-->G{{O custo ao consumidor e igual a CC}}
 G-->H([FIM])
 ```
-´´´
+```
 ALGORITIMO custo_ao_consumidor
 DECLARE i, pd, c ,cc NUMERICOS
 INICIO 
@@ -100,4 +100,28 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+### exercício 5
+Calcule o quadrado de um número.
+
+#### Fluxograma
+```mermaid 
+flowchart TD
+A([Inicio])-->B{{Insira um numero}}
+B-->C[/numero/]
+C-->D[Q ==numero * numero]
+D-->E{{Q é igual à numero ao quadrado}}
+E-->F([FIM])
+```
+```
+ALGORITIMO numero_ao_quadrado
+DECLARE n, q NUMERICOS 
+INICIO
+	ESCREVA "Digite um numero"
+	LEIA n
+	q == n  * n
+	LEIA Q 
+	ESCREVRA "q é igual a n ao quadrado"
+FIM
+FIM_ALGORITIMO
+``` 
 
