@@ -36,3 +36,11 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+### exercicio 2 
+ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os
+múltiplos de 3.
+#### Fluxograms
+```mermaid
+flowchart TD
+
+
