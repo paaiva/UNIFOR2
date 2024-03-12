@@ -164,4 +164,69 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+### exercício 7
+Uma companhia de carros paga a seus empregados um salário de R$ 500,00 por mês mais uma comissão de R$ 50,00 para cada carro vendido e mais 5% do valor da venda. Elabore um algoritimo para calcular e imprimir o salário do vendedor num dado mês recebendo como dados de entrada o nome do vendedor, o número de carros vendidos e o valor total das vendas. 
+#### Fluxograma 
+```mermaid 
+flowchart TD
+A([Inicio])-->B{{Digite seu nome}}
+B-->C[/nome/]
+C-->D{{Digite a quantidade de carros vendidos}}
+D-->E[/carros vendidos/]
+E-->F{{Digite o valor total das vendas}}
+F-->G[/total de vendas/]
+G-->H[ST== carros vendidos * 50 + total de vendas * 0.05 + 500]
+H-->I[/ST/]
+I-->J{{ST é igual ao salario total de nome}}
+J-->K([FIM])
+```
+```
+ALGORITIMO salario_total
+DECLARE st, carros_vendidos, total_de_vendas NUMERICO
+DECLARE nome CARACTER
+INICIO 
+	ESCREVA "Digite seu nome" 
+	LEIA nome
+	ESCREVA "Digite a quantidade de carros vendidos"
+	LEIA carros_vendidos
+	ESCREVA "Digite a o valor total das vendas"
+	LEIA total_de_vendas
+	st == (carros_vendidos * 50) + 
+		  (total_de_vendas * 0.05) + 500
+	ESCREVA "nome, seu salario total é igual a st"
+FIM
+FIM_ALGORITIMO
+```
+### exercício 8 
+Calcule a média de um aluno na disciplina de RLA. Para isso solicite o nome do aluno, a nota da prova e a nota qualitativa. Sabe-se que a nota da prova tem peso 2 e a nota qualitativa peso 1. Mostre a média como resultado.
+#### Fluxograma
 
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite seu nome}}
+B-->C[/nome/]
+C-->D{{Insira a nota da prova}}
+D-->E[/nota_prova/]
+E-->F{{Insira a nota qualitativa}}
+F-->G[/nota_qualitativa/]
+G-->H[m== nota_prova * 2 + nota_qualitativa * 1 / 3]
+H-->I[/media/]
+I-->J{{nome, sua nova media é igual a m}}
+J-->K([FIM])
+```
+```
+ALGORITIMO media_com_peso
+DECLARE m, nota_qualitativa, nota_prova NUMERICOS
+DECLARE nome CARACTER
+INICIO
+	ESCREVA "Digite seu nome"
+	LEIA nome
+	ESCREVA "Digite a nota da prova"
+	LEIA nota_prova
+	ESCREVA "Digite a nota qualitativa"
+	LEIA nota_qualitativa
+	m== (nota_prova * 2 + nota_qualitativa * 1) / 3 
+	ESCREVA "nome, sua nova média é igual a m"
+FIM
+FIM_ALGORITIMO
+```
