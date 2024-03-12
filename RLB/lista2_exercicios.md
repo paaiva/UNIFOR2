@@ -15,7 +15,7 @@ F-->G([FIM])
 ```
 ```
 ALGORITIMO media_4_numeros
-DECLARE n1, n2, n3. n4, media NUMERICOS 
+DECLARE n1, n2, n3. n4, m: real
 INICIO
 	ESCREVA "Digite n1"
 	LEIA n1
@@ -25,8 +25,8 @@ INICIO
 	LEIA n3
 	ESCREVA "Digite n4"
 	LEIA n4
-	media == (n1 + n2 + n3 + n4) / 4 
-	ESCREVA " media dos números ==M"
+	m == (n1 + n2 + n3 + n4) / 4 
+	ESCREVA " media dos números é igual à m"
 FIM
 FIM_ALGORITIMO
 ```
@@ -43,7 +43,7 @@ E-->F([FIM])
 ``` 
 ``` 
 ALGORITIMO transformar_celsius_em_fahrenheit
-DECLARE c, f NUMERICO
+DECLARE c, f: real
 INICIO
 	ESCREVA "Digite o valor em c"
 	LEIA c
@@ -65,7 +65,7 @@ E-->F([FIM])
 ```
 ```
 ALGORITIMO polegadas_para_milimetros
-DECLARE polegadas NUMERICO
+DECLARE polegadas: real
 INICIO 
 	ESCREVA "insira a quantidade em polegadas"
 	LEIA polegadas 
@@ -89,7 +89,7 @@ G-->H([FIM])
 ```
 ```
 ALGORITIMO custo_ao_consumidor
-DECLARE i, pd, c ,cc NUMERICOS
+DECLARE i, pd, c ,cc: real
 INICIO 
 	ESCREVA "Digite o valor do custo de fabrica do carro"
 	LEIA c 
@@ -114,7 +114,7 @@ E-->F([FIM])
 ```
 ```
 ALGORITIMO numero_ao_quadrado
-DECLARE n, q NUMERICOS 
+DECLARE n, q: inteiro
 INICIO
 	ESCREVA "Digite um numero"
 	LEIA n
@@ -143,7 +143,7 @@ E-->F([FIM])
 ```
 ```
 ALGORITIMO cardapio_lanchonete
-DECLARE qh, qc, qf, qr, qm, conta_final NUMERICOS
+DECLARE qh, qc, qf, qr, qm, conta_final: real
 INICIO 
 	ESCREVA "Digite a quantidade de hamburger"
 	LEIA qh
@@ -182,8 +182,10 @@ J-->K([FIM])
 ```
 ```
 ALGORITIMO salario_total
-DECLARE st, carros_vendidos, total_de_vendas NUMERICO
-DECLARE nome CARACTER
+DECLARE carros_vendidos : inteiro
+	st,
+	total_de_vendas: real
+        nome: caractere
 INICIO 
 	ESCREVA "Digite seu nome" 
 	LEIA nome
@@ -216,8 +218,8 @@ J-->K([FIM])
 ```
 ```
 ALGORITIMO media_com_peso
-DECLARE m, nota_qualitativa, nota_prova NUMERICOS
-DECLARE nome CARACTER
+DECLARE m, nota_qualitativa, nota_prova: real
+	 nome: caractere
 INICIO
 	ESCREVA "Digite seu nome"
 	LEIA nome
@@ -230,3 +232,47 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+### exercício 9
+Suponha que você deseja preencher a seguinte ficha de inscrição de um estudante: nome,
+matrícula, curso, email, idade. Imprima os dados do usuario como uma ficha preenchida
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite seu nome}}
+B-->C[/nome/]
+C-->D{{Digite sua idade}}
+D-->E[/idade/]
+E-->F{{Digite sua matrícula}}
+F-->G[/matrícula/]
+G-->H{{Digite seu curso}}
+H-->I[/curso/]
+I-->J{{Digite seu email}}
+J-->K[/email/]
+K-->L{{Nome: nome, Idade: idade, Matrícula: matrícula, Email: email, Curso: curso}}
+L-->M([FIM])
+```
+```
+ALGORITIMO ficha_de_inscrição
+DECLARE nome,
+	curso,
+	email : caractere
+	idade,
+	matrícula : inteiro
+INICIO
+	ESCREVA "Digite seu nome"
+	LEIA nome
+	ESCREVA "Digite seu curso"
+	LEIA curso
+	ESCREVA "Digite seu email"
+	LEIA email
+	ESCREVA "Digite sua matrícula"
+	LEIA matrícula
+	ESCREVA "Digite sua idade"
+	LEIA idade
+	ESCREVA "Nome: nome
+		 Idade: idade
+		 Curso: curso
+		 Email: email
+		 Matrícula: matrícula"
+FIM
+FIM_AGORITIMO
