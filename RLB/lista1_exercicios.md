@@ -39,8 +39,8 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
-|LISTA| LISTA|LISTA |teste|
-|||||
+|LISTA|LISTA|LISTA |teste|
+ |teste|teset|teste|teste|
 
 
 ### exercicio 4
