@@ -3,43 +3,47 @@
 **DICIPLINA:** raciocinio logico algoritimo
 **Orientador:** Prof. Ricardo Carubbi
 ## Lista 1 exercicio
-### exercicio 3
+### exercicio 1
 Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
 #### Fluxograma
-
 ```mermaid
 flowchart TD
-A([INICIO])-->B{{Digite um numero:}}
-B --> C[/numero/]
-C --> D{numero>0}
-D --NAO--> E{{O numero deve ser positivo!}}
-E --> J([FIM])
-D --SIM--> F[resto = numero % 2]
-F --> G{resto == 0}
-G --NAO--> H{{O numero e impar}}
-G --SIM--> I{{O numero e par}}
-H --> J
-I --> J
+A([Inicio])-->B{{Digite um número: }}
+B-->C[/número/]
+C-->D{número > 0}
+D--NÃO-->J{{O numero deve ser positivo}}
+J--ENQUANTO-->K{{O número for < 0}}
+K--FAÇA-->L{{Digite um número positivo: }}
+L-->C
+D--SIM-->E[resto == numero / 2]
+E-->F{resto == 0}
+F--SIM-->G{{O número é par}}
+F--NÃO-->H{{O número é ímpar}}
+G-->I([FIM])
+H-->I
 ```
-
-```
-ALGORITIMO verifica_par_impar
-DECLARE numero, resto INTEIRO
-ESCREVA "Digite um numero"
-LEIA numero
-SE numero > 0 ENTAO
-	resto = numero % 2
-	SE resto == 0 ENTAO
-		ESCREVA "O numero e par!"
-
-	SENAO
-		ESCREVA "O numero e impar!"
-
-SENAO
-	ESCREVA "O numero deve ser positivo"
-
+``` 
+ALGORITIMO impar_par
+DECLARE n, r: inteiro 
+INICIO
+	ESCREVA "Digite um número"
+	LEIA n
+	ENQUANTO n<0 FAÇA
+		ESCREVA "Digite um número positivo: "
+		LEIA n
+	r == n / 2
+		SE r == 0
+			ESCREVA "O número é par"
+		SENAO
+			ESCREVA "O número é impar"
+FIM
 FIM_ALGORITIMO
 ```
+```
+| | | |
+____ 
+```
+
 
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
