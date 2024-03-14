@@ -39,8 +39,7 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
-```
-| | | |
+| | | | | |
 ____ 
 ```
 
