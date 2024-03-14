@@ -284,25 +284,25 @@ FIM_AGORITIMO
 flowchart TD
 A([Inicio])-->B{{Digite n1, n2}}
 B-->C[/n1, n2/]
-C--D{{Digite o operador}}
+C-->D{{Digite o operador}}
 D-->E[/operador/]
-E--escolha-->F{operador}
-F--caso-->G[operador== +]
+E--ESCOLHA-->F{operador}
+F--CASO-->G[operador== +]
 G-->H[r== n1 + n2]
 H-->I[/r/]
 I-->J{{r é o resultado}}
 J-->K([FIM])
-F-->L[operador== -]
+F--CASO-->L[operador== -]
 L-->M[r== n1- n2]
 M-->N[/r/]
 N-->O{{r é o resultado}}
 O-->K
-F-->P[operador== *]
+F--CASO-->P[operador== *]
 P-->Q[r== m1 * n2]
 Q-->R[/r/]
 R-->S{{r é o resultado}}
 S-->K
-F-->T[operador== %]
+F--CASO-->T[operador== %]
 T-->U[r==n1 % n2]
 U-->V[/r/]
 V-->W{{r é o resultado}}
