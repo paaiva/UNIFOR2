@@ -41,6 +41,7 @@ FIM_ALGORITIMO
 ```
 
 |numero| numero>=0| resto| resto==0| saida|
+--         --          --  --          -- 
 |-1| f|||" o numero deve ser positivo"|
 
 
