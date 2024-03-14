@@ -39,8 +39,11 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
-|LISTA|LISTA|LISTA |teste|
- |teste|teset|teste|teste|
+
+|numero| numero>=0| resto| resto==0| saida|
+|-1| f|||" o numero deve ser positivo"|
+
+
 
 
 ### exercicio 4
