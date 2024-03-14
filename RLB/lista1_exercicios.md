@@ -40,11 +40,9 @@ FIM
 FIM_ALGORITIMO
 ```
 
-|numero| numero>=0| resto| resto==0| saida|
---         --          --  --          -- 
-|-1| f|||" o numero deve ser positivo"|
-
-
+| numero | numero>=0 | resto | resto==0 | saida |
+| -- | -- | -- | -- | -- |
+|-2 | | | | " O numero deve ser positivo!" |
 
 
 ### exercicio 4
