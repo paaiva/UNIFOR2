@@ -277,8 +277,10 @@ INICIO
 FIM
 FIM_AGORITIMO
 ```
-### exercício 4 atualizado
----
+### exercício 3 atualizado
+Receba dois números reais e um operador e efetue a operação correspondente com os
+valores recebidos (operandos). O algoritmo deve retornar o resultado da operação
+selecionada simulando todas as operações de uma calculadora simples
 #### Fluxograma
 ```mermaid
 flowchart TD
@@ -336,3 +338,56 @@ ESCOLHA
 	     ESCREVA "O operador não é valido"
 FIM
 FIM_ALGORITIMO
+```
+### Exercício 4 atualizado
+Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos),
+infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que
+18 anos)
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite sua idade}}
+B-->C[/idade/]
+C--ESCOLHA-->D{idade}
+D--SENAO-->P{{O jovem não possui grupo definido}}
+P-->G
+D--CASO-->E[idade >= 5 and idade <= 7]
+E-->F {{O jovem pertence ao infantl A}}
+F-->G([FIM])
+D--CASO-->H[idade >= 8 and idade <= 10]
+H-->I{{O jovem pertence ao ifantil B}}
+I-->G
+D--CASO-->J[idade >= 11 and idade <= 13]
+J-->K{{O jovem pertence ao juvenil A}}
+K-->G
+D--CASO-->L[idade >= 14 and idade <= 17]
+L-->M{{O jovem pertence ao juvenil B}}
+M-->G
+D--CASO-->N[idade >= 18]
+N-->O{{pertence ao grupo adulto}}
+O-->G
+```
+```
+ALGORÌTIMO grupo_idade
+DECLARE idade: inteiro
+INICIO
+ESCREVA "Digite sua idade"
+LEIA idade
+ESCOLHA
+	CASO idade >= 5 and idade <= 7
+	     ESCREVA "O jovem pertence ao ifantil A"
+	CASO idade >= 8 and idade <= 10
+  	     ESCREVA "O jovem pertence ao infantil B"
+	CASO idade >= 11 and idade <= 13
+	     ESCREVA "O jovem pertence ao juvenil A"
+	CASO idade >= 14 amd idade <= 17
+	     ESCREVA "O jovem pertence ao juvenil B"
+	CASO idade >= 18
+             ESCREVA "pertence ao grupo adulto"
+	SENAO
+	     ESCREVA "O jovem nao possui grupo definido"
+FIM
+FIM_ALGORITIMO
+```
+
+
