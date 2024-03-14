@@ -352,7 +352,7 @@ C--ESCOLHA-->D{idade}
 D--SENAO-->P{{O jovem não possui grupo definido}}
 P-->G
 D--CASO-->E[idade >= 5 and idade <= 7]
-E-->F {{O jovem pertence ao infantl A}}
+E-->F{{O jovem pertence ao infantl A}}
 F-->G([FIM])
 D--CASO-->H[idade >= 8 and idade <= 10]
 H-->I{{O jovem pertence ao ifantil B}}
