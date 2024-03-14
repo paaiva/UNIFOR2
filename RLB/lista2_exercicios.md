@@ -307,3 +307,32 @@ T-->U[r==n1 % n2]
 U-->V[/r/]
 V-->W{{r é o resultado}}
 W-->K
+```
+```
+ALGORITIMO calculadora
+DECLARE n1, n2, r: real
+	operador: caractere 
+INICIO
+ESCREVA "Digite o primeiro numero"
+LEIA n1
+ESCREVA "Digite o segundo número"
+LEIA n2
+ESCREVA "Digite o operador"
+LEIA operador
+ESCOLHA
+	CASO operador == +
+             r== n1+n2
+	     ESCREVA " r é o resultado"
+	CASO operador == *
+             r== n1*n2
+	     ESCREVA " r é o resultado"
+	CASO operador == %
+             r== n1%n2
+	     ESCREVA " r é o resultado"
+	CASO operador == -
+             r== n1-n2
+	     ESCREVA " r é o resultado"
+	SENAO
+	     ESCREVA "O operador não é valido"
+FIM
+FIM_ALGORITIMO
