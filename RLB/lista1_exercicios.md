@@ -48,6 +48,50 @@ FIM_ALGORITIMO
 | 7 | true | 1 | false | "O número é ímpar!" |
 | 12 | true | 0 | true | "O número é par!" |
 
+
+ ### exercicio 2
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um
+funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão
+aumento de 20%; os demais terão aumento de 10%.
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite seu salario}}
+B-->C[/Salario/]
+C-->D{Salario <= 500}
+D--SIM-->E[ns == Salario * 1,20]
+E-->F[/ns/]
+F-->J{{seu novo salário é igual a ns}}
+J-->G([FIM])
+D--NAO-->H[ns == Salario * 1,10]
+H-->I[/ns/]
+I-->K{{seu novo salário é igual a ns}}
+K-->G
+```
+
+#### pseudocódigo
+```
+ALGORITIMO novo_salario
+DECLARE salario, ns: real
+INICIO
+ESCREVA "Digite seu salario"
+LEIA salario
+SE salario <=500
+	ns == salario x 1,20
+	ESCREVA "ns é seu novo salario!"
+SENAO
+	ns == salario x 1,10
+	ESCREVA "ns é seu novo salario!"
+FIM
+FIM_ALGORITIMO
+```
+#### teste de mesa
+| salario | <= 500 | salario + 20% | salario + 10% | novo salário |
+| -- | -- | -- | -- | -- |
+| 500 | true | true | | 600 |
+| 600 | false | | true | 660 |
+| 700 | false | | true | 770 |
+| 300 | true | true | | 360 | 
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
 candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade,
