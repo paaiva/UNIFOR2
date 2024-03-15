@@ -76,12 +76,12 @@ DECLARE salario, ns: real
 INICIO
 ESCREVA "Digite seu salario"
 LEIA salario
-SE salario <=500
-	ns == salario * 1.20
-	ESCREVA "ns é seu novo salario!"
-SENAO
-	ns == salario * 1.10
-	ESCREVA "ns é seu novo salario!"
+	SE salario <=500
+		ns == salario * 1.20
+		ESCREVA "ns é seu novo salario!"
+	SENAO
+		ns == salario * 1.10
+		ESCREVA "ns é seu novo salario!"
 FIM
 FIM_ALGORITIMO
 ```
@@ -124,9 +124,9 @@ LEIA n2
 m == (n1 + n2) / 2
 LEIA m
 	SE m >= 7
-	   ESCREVA "Aprovado!"
+		ESCREVA "Aprovado!"
 	SENAO
-	   ESCREVA "Reprovado!"
+		ESCREVA "Reprovado!"
 FIM
 FIM_ALGORITIMO
 ```
@@ -137,6 +137,7 @@ FIM_ALGORITIMO
 | 4, 8 | 6 | false | "Aluno reprovado!" | 
 | 3, 5 | 4 | false | "Aluno reprovado!" |
 | 10, 5 | 7.5 | true | "Aluno aprovado!" | 
+
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
 candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade,
@@ -146,95 +147,34 @@ calcular quantos anos faltam para o candidato estar apto.
 ```mermaid
 flowchart TD
 A([Inicio])-->B{{Digite sua Idade}}
-B-->C{Idade >= 18}
+B-->H[/idade/]
+H-->C{Idade >= 18}
 C--SIM-->D{{Pode tirar CNH!}}
 D-->E([FIM])
-C--NAO-->F[18 - Idade == X]
-F-->G{{Nao pode tirar CNH, faltam X anos!}}
+C--NAO-->F[x == 18 - idade]
+F-->I[/x/]
+I-->G{{Nao pode tirar CNH, faltam x anos!}}
 G-->E
 ```
-
+#### pseudocódigo
 ```
 ALGORITIMO tirar_CNH
-DECLARE idade NUMERICO
+DECLARE idade, x : inteiro
+INICIO
 ESCREVA "Digite sua idade"
 LEIA idade
-SE idade >= 18
-	ESCREVA "Pode tirar CNH!"
-
-SENAO
-	X = 18 - idade
-	ESCREVA "Nao pode tirar CNH! Faltam X anos"
-
-FIM_ALGORITIMO
-	
+	SE idade >= 18
+		ESCREVA "Pode tirar CNH!"
+	SENAO
+		x = 18 - idade
+		ESCREVA "Nao pode tirar CNH! Faltam X anos"
+FIM
+FIM_ALGORITIMO	
 ```
-
-
-### exercicio 1 
-Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética
-entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
-#### Fluxograma
-``` mermaid
-flowchart TD
-A([inicio])-->B{{Digite N1, N2}}
-B-->C[/N1, N2/]
-C-->D[Media == N1 + N2 / 2]
-D-->E{Media>=7}
-E--SIM-->F{{Aprovado!}}
-F-->H([FIM])
-E--NAO-->G{{Reprovado}}
-G-->H
-
-``` 
-
-```
-ALGORITIMO media_aritimetica
-DECLARE x NUMERICO
-DECLARE y NUMERICO
-ESCREVA "Escreva nota 1 "
-ESCREVA "Escreva nota 2"
-LEIA x
-LEIA  y 
-SE x + y / 2 >= 7
-	ESCREVA "Aprovado!"
-
-SENAO
-	ESCREVA "Reprovado!"
-
-FIM_ALGORITIMO
-```
-### exercicio 2
-Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um
-funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão
-aumento de 20%; os demais terão aumento de 10%.
-#### Fluxograma
-```mermaid
-flowchart TD
-A([Inicio])-->B{{Digite seu salario}}
-B-->C[/Salario/]
-C-->D{Salario <= 500}
-D--SIM-->E[Salario x 1,20]
-E-->F[/Novo salario/]
-F-->G([FIM])
-D--NAO-->H[Salario x 1,10]
-H-->I[/Novo Salario/]
-I-->G
-```
-
-```
-ALGORITIMO novo_salario
-DECLARE salario NUMERICO
-ESCREVA "Digite seu salario"
-LEIA salario
-SE salario <=500
-	novo salario == salario x 1,20
-	ESCREVA "Este e seu novo salario!"
-	
-SENAO
-	novo salario == salario x 1,10
-	ESCREVA "Este e seu novo salario!"
-
-FIM_ALGORITIMO
-```
-
+#### teste de mesa 
+| idade | idade >= 18 | anos que faltam | saída |
+| -- | -- | -- | -- |
+| 15 | false | 3 | "Não pode tirar CNH" | 
+| 18 | true | | Pode tirar CNH" | 
+| 25 | true | | "Pode tirar CNH" | 
+| 17 | false | 1 | "Não pode tirar CNH" | 
