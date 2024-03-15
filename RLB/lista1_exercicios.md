@@ -22,6 +22,7 @@ F--NÃO-->H{{O número é ímpar}}
 G-->I([FIM])
 H-->I
 ```
+#### pseudocodigo
 ``` 
 ALGORITIMO impar_par
 DECLARE n, r: inteiro 
@@ -39,11 +40,13 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
-
+#### teste de mesa
 | numero | numero>=0 | resto | resto==0 | saida |
 | -- | -- | -- | -- | -- |
-|-2 | | | | " O numero deve ser positivo!" |
-
+|-2 | |false | | " O numero deve ser positivo!" |
+| 2 | true | 0 | true | "O número é par!" |
+| 7 | true | 1 | false | "O número é ímpar!" |
+| 12 | true | 0 | true | "O número é par!" |
 
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
