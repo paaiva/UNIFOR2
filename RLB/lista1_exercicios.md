@@ -88,10 +88,10 @@ FIM_ALGORITIMO
 #### teste de mesa
 | salario | <= 500 | salario + 20% | salario + 10% | novo salário |
 | -- | -- | -- | -- | -- |
-| 500 | true | true | | 600 |
-| 600 | false | | true | 660 |
-| 700 | false | | true | 770 |
-| 300 | true | true | | 360 | 
+| 500 | true | true | | false |
+| 600 | false | false | true | 660 |
+| 700 | false | false | true | 770 |
+| 300 | true | true | false | 360 | 
 
 ### exercicio 3 
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética
