@@ -59,11 +59,11 @@ flowchart TD
 A([Inicio])-->B{{Digite seu salario}}
 B-->C[/Salario/]
 C-->D{Salario <= 500}
-D--SIM-->E[ns == Salario * 1,20]
+D--SIM-->E[ns == Salario * 1.20]
 E-->F[/ns/]
 F-->J{{seu novo salário é igual a ns}}
 J-->G([FIM])
-D--NAO-->H[ns == Salario * 1,10]
+D--NAO-->H[ns == Salario * 1.10]
 H-->I[/ns/]
 I-->K{{seu novo salário é igual a ns}}
 K-->G
@@ -77,10 +77,10 @@ INICIO
 ESCREVA "Digite seu salario"
 LEIA salario
 SE salario <=500
-	ns == salario x 1,20
+	ns == salario * 1.20
 	ESCREVA "ns é seu novo salario!"
 SENAO
-	ns == salario x 1,10
+	ns == salario * 1.10
 	ESCREVA "ns é seu novo salario!"
 FIM
 FIM_ALGORITIMO
@@ -92,6 +92,51 @@ FIM_ALGORITIMO
 | 600 | false | | true | 660 |
 | 700 | false | | true | 770 |
 | 300 | true | true | | 360 | 
+
+### exercicio 3 
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética
+entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
+#### Fluxograma
+``` mermaid
+flowchart TD
+A([inicio])-->B{{Digite N1, N2}}
+B-->C[/N1, N2/]
+C-->D[M == N1 + N2 / 2]
+D-->I[/M/]
+I-->E{M>=7}
+E--SIM-->F{{Aprovado!}}
+F-->H([FIM])
+E--NAO-->G{{Reprovado}}
+G-->H
+
+``` 
+#### pseudocódigo
+```
+ALGORITIMO media_aritimetica
+DECLARE n1,
+	n2,
+	m : real
+INICIO
+ESCREVA "Escreva nota 1 "
+LEIA n1
+ESCREVA "Escreva nota 2"
+LEIA n2
+m == (n1 + n2) / 2
+LEIA m
+	SE m >= 7
+	   ESCREVA "Aprovado!"
+	SENAO
+	   ESCREVA "Reprovado!"
+FIM
+FIM_ALGORITIMO
+```
+#### teste de mesa 
+| n1, n2 | média | média >= 7 | saída |
+| -- | -- | -- | -- |
+| 8, 10 | 9 | true | "Aluno aprovado!" | 
+| 4, 8 | 6 | false | "Aluno reprovado!" | 
+| 3, 5 | 4 | false | "Aluno reprovado!" |
+| 10, 5 | 7.5 | true | "Aluno aprovado!" | 
 ### exercicio 4
  Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do
 candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade,
