@@ -88,7 +88,7 @@ FIM_ALGORITIMO
 #### teste de mesa
 | salario | <= 500 | salario + 20% | salario + 10% | novo salário |
 | -- | -- | -- | -- | -- |
-| 500 | true | true | | false |
+| 500 | true | true | false | 600 |
 | 600 | false | false | true | 660 |
 | 700 | false | false | true | 770 |
 | 300 | true | true | false | 360 | 
