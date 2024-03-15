@@ -43,7 +43,7 @@ FIM_ALGORITIMO
 #### teste de mesa
 | numero | numero>=0 | resto | resto==0 | saida |
 | -- | -- | -- | -- | -- |
-|-2 | |false | | " O numero deve ser positivo!" |
+|-2 | false | | | " O numero deve ser positivo!" |
 | 2 | true | 0 | true | "O número é par!" |
 | 7 | true | 1 | false | "O número é ímpar!" |
 | 12 | true | 0 | true | "O número é par!" |
