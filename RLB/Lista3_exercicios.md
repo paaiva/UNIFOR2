@@ -46,8 +46,24 @@ FIM_ALGORITIMO
 ### exercicio 2 
  Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os
 múltiplos de 3.
-#### Fluxograms
+#### Fluxograma
 ```mermaid
 flowchart TD
+```
+### exercício 3
+#### Fluxograma
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Insira uma sequência de números inteiros separados por vírgula}}
+B-->C[/sequência/]
+C-->D{numeros == inteiro}
 
+F--FAÇA-->G{{Insira uma sequência inteira}}
+E--ENQUANTO-->F[numeros != inteiro]
+D--NAO-->E{{Os numeros devem ser inteiros}}
+
+D--SIM-->H[s == numero + numero + numero...]
+H-->I{{A soma é igual a s}}
+I-->J([FIM])
+G-->C
 
