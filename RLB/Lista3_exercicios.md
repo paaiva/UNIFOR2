@@ -23,16 +23,16 @@ H-->I
 ALGORITIMO impar_par
 DECLARE n, r: inteiro 
 INICIO
-	ESCREVA "Digite um número"
-	LEIA n
+ESCREVA "Digite um número"
+LEIA n
 	ENQUANTO n<0 FAÇA
 		ESCREVA "Digite um número positivo: "
 		LEIA n
-	r == n / 2
-		SE r == 0
-			ESCREVA "O número é par"
-		SENAO
-			ESCREVA "O número é impar"
+r == n / 2
+	SE r == 0
+		ESCREVA "O número é par"
+	SENAO
+		ESCREVA "O número é impar"
 FIM
 FIM_ALGORITIMO
 ```
@@ -88,4 +88,20 @@ D--SIM-->H[s == numero + numero + numero...]
 H-->I{{A soma é igual a s}}
 I-->J([FIM])
 G-->C
+```
+#### pseudocodigo
+DECLARE sequencia, r: inteiro
+INICIO
+ESCREVA "Digite uma sequencia de numeros inteiros separados por virgula"
+LEIA sequencia
+	ENQUANTO sequência != inteiro FAÇA
+ 		ESCREVA "Digite uma sequência inteira"
+   		LEIA sequência 
+r == numero + numero + numero...
+ESCREVA "Soma é igual a r"
+FIM
+FIM_ALGORITIMO
+
+ 	
+ 
 
