@@ -63,8 +63,14 @@ f== (9/5) * c + 32
 ESCREVA " f é o novo valor em fahrenheit"
 FIM
 FIM_ALGORITIMO
-``` 
-
+```
+#### teste de mesa 
+| valor em C | valor em Fahrenheit | saída |
+| -- | -- | -- |
+| 25 | 77 | "O valor convertido para fahrenheit é de 77 F " |
+| 18 | 64.4 | "O valor convertido para fahrenheit é de 64.4 F" |
+| 28| 82.4 | "O valor convertido para fahrenheit é de 82.4 F " | 
+| 21 | 69.8 | "O valor convertido para fahrenheit é de 69.8 F" | 
 
 ```
 
@@ -80,27 +86,32 @@ A([Inicio])-->B{{Digite n1, n2}}
 B-->C[/n1, n2/]
 C-->D{{Digite o operador}}
 D-->E[/operador/]
-E--ESCOLHA-->F{operador}
-F--CASO-->G[operador== +]
-G-->H[r== n1 + n2]
-H-->I[/r/]
-I-->J{{r é o resultado}}
-J-->K([FIM])
-F--CASO-->L[operador== -]
-L-->M[r== n1- n2]
-M-->N[/r/]
-N-->O{{r é o resultado}}
-O-->K
-F--CASO-->P[operador== *]
-P-->Q[r== m1 * n2]
+E-->F{operador == +}
+
+F--FALSE-->G{operador ==-}
+G--FALSE-->H{operador ==%}
+H--FALSE-->I{operador ==*}
+I--FALSE-->W{{O operador não é valido}}
+W-->M
+I--TRUE-->T[r == n1*n2]
+T-->U[/r/]
+U==>V{{r é o seu resultado}}
+V-->M
+
+
+F--TRUE-->J[r == n1 + n2]
+J-->K[/r/]
+K-->L{{r é o seu resultado}}
+L-->M([FIM])
+G--TRUE-->N[r == n1 - n2]
+N-->O[/r/]
+O-->P{{r é o seu resultado}}
+P-->M
+H--TRUE-->Q[r== n1 % n2]
 Q-->R[/r/]
-R-->S{{r é o resultado}}
-S-->K
-F--CASO-->T[operador== %]
-T-->U[r==n1 % n2]
-U-->V[/r/]
-V-->W{{r é o resultado}}
-W-->K
+R-->S{{r é o seu resultado}}
+S-->M
+
 ```
 ```
 ALGORITIMO calculadora
@@ -115,22 +126,29 @@ ESCREVA "Digite o operador"
 LEIA operador
 ESCOLHA
 	CASO operador == +
-             r== n1+n2
-	     ESCREVA " r é o resultado"
+		r== n1+n2
+		ESCREVA " r é o resultado"
 	CASO operador == *
-             r== n1*n2
-	     ESCREVA " r é o resultado"
+		r== n1*n2
+		ESCREVA " r é o resultado"
 	CASO operador == %
-             r== n1%n2
-	     ESCREVA " r é o resultado"
+		r== n1%n2
+		ESCREVA " r é o resultado"
 	CASO operador == -
-             r== n1-n2
-	     ESCREVA " r é o resultado"
+		r== n1-n2
+		ESCREVA " r é o resultado"
 	SENAO
-	     ESCREVA "O operador não é valido"
+		ESCREVA "O operador não é valido"
 FIM
 FIM_ALGORITIMO
 ```
+#### teste de mesa 
+| Insira n1, n2 | Insira o operador | operador é válido | resultado |
+| -- | -- | -- | -- |
+| 4, 6 | + | true | 10 | 
+| 9, 3 | - | true | 6 | 
+| 10, 5 | % | true | 2 | 
+| 12, 2 | . | false | | 
 ### Exercício 4 atualizado
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos),
 infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que
@@ -140,24 +158,29 @@ infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adu
 flowchart TD
 A([Inicio])-->B{{Digite sua idade}}
 B-->C[/idade/]
-C--ESCOLHA-->D{idade}
-D--SENAO-->P{{O jovem não possui grupo definido}}
-P-->G
-D--CASO-->E[idade >= 5 and idade <= 7]
-E-->F{{O jovem pertence ao infantl A}}
-F-->G([FIM])
-D--CASO-->H[idade >= 8 and idade <= 10]
-H-->I{{O jovem pertence ao ifantil B}}
-I-->G
-D--CASO-->J[idade >= 11 and idade <= 13]
-J-->K{{O jovem pertence ao juvenil A}}
-K-->G
-D--CASO-->L[idade >= 14 and idade <= 17]
-L-->M{{O jovem pertence ao juvenil B}}
-M-->G
-D--CASO-->N[idade >= 18]
-N-->O{{pertence ao grupo adulto}}
-O-->G
+C---->D{idade >= 5 and idade <= 7}
+
+D--FALSE-->G{idade >= 8 and idade <= 10}
+
+G--FALSE -->I{idade >= 11 and idade <= 13}
+
+I--FALSE-->K{idade>= 14 and idade <=  17}
+
+K--FALSE-->M{idade >= 18}
+
+M--FALSE-->O{{O jovem nao possui grupo definido}}
+O-->F
+D--TRUE-->E{{O jovem pertence ao infantil A}}
+E-->F([FIM])
+G--TRUE-->H{{O jovem pertence ao infantil B}}
+H-->F
+I--TRUE-->J{{O jovem pertence ao juvenil A}}
+J-->F
+
+K--TRUE-->L{{O jovem pertence ao juvenil B}}
+L-->F
+M--TRUE-->N{{pertence ao grupo adulto}}
+N-->F
 ```
 ```
 ALGORÌTIMO grupo_idade
@@ -181,5 +204,11 @@ ESCOLHA
 FIM
 FIM_ALGORITIMO
 ```
-
+#### teste de mesa
+| Idade | idade < 5 | 5=<idade<=7 | 8<=idade<=10 | 11<=idade<=13 | 14<=idade<=17| idade>=18 | saída |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| 10 | false | false | true | false | false | false | "O jovempertence ao infantil B" | 
+| 3 | true | false | false | false | false | false | "O jovem não possui grupo definido" | 
+| 12 | false | false | false | true | false | false | "O jovem pertence ao grupo juvenil A" | 
+| 25 | false | false | false | false | false | true | "Pertence ao grupo adulto" | 
 
