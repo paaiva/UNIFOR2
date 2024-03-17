@@ -36,6 +36,13 @@ INICIO
 FIM
 FIM_ALGORITIMO
 ```
+#### teste de mesa 
+| Número | Número >0 | resto | resto = 0 | saída |
+| -- | -- | -- | -- | -- |
+| -4 | false | | | "O número deve ser positivo" | 
+| 12 | true | 0 | true | "O número é par!" | 
+| 27 | true | 1 | false | "O número é ímpar!" | 
+| 230 | true | 0 | true | "O número é par!" |
 ### exercicio 2 
  Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os
 múltiplos de 3.
