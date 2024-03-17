@@ -49,7 +49,29 @@ múltiplos de 3.
 #### Fluxograma
 ```mermaid
 flowchart TD
+A([Inicio])-->B[n==30]
+B-->C[soma== 0]
+C-->D[i=1 ATÉ n PASSO 1]
+D-->E[soma == soma + i]
+E-->F{{A contagem é igual à soma}}
+F-->G([FIM])
+D-->F
+E-->D
+
 ```
+#### pseudocódigo
+DECLARE soma, n, i: inteiro
+INICIO
+i== 3
+n== 30
+soma == 0
+PARA i ATE n PASSO 1 FAÇA
+	soma == soma + i
+ 	ESCREVA "contagem é igual a soma"
+FIM_PARA
+FIM_ALGORITIMO
+
+
 ### exercício 3
 #### Fluxograma
 ```mermaid
