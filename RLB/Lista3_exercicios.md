@@ -90,6 +90,8 @@ I-->J([FIM])
 G-->C
 ```
 #### pseudocodigo
+```
+ALGORITIMO soma_sequencia
 DECLARE sequencia, r: inteiro
 INICIO
 ESCREVA "Digite uma sequencia de numeros inteiros separados por virgula"
@@ -101,6 +103,9 @@ r == numero + numero + numero...
 ESCREVA "Soma é igual a r"
 FIM
 FIM_ALGORITIMO
+```
+#### exercício 4
+Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas.
 
  	
  
