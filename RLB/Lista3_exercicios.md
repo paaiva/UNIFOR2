@@ -60,6 +60,7 @@ E-->D
 
 ```
 #### pseudocódigo
+```
 DECLARE soma, n, i: inteiro
 INICIO
 i== 3
@@ -70,6 +71,7 @@ PARA i ATE n PASSO 1 FAÇA
  	ESCREVA "contagem é igual a soma"
 FIM_PARA
 FIM_ALGORITIMO
+```
 
 
 ### exercício 3
