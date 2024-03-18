@@ -104,8 +104,50 @@ ESCREVA "Soma é igual a r"
 FIM
 FIM_ALGORITIMO
 ```
-#### exercício 4
+### exercício 4
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas.
+#### Fluxograma 
+```mermaid
+flowchart TD
+A([Inicio])-->B{{Digite as notas:}}
+B-->E[/notas/]
+E-->C{notas > 0}
+C--NAO-->D{{as notas devem ser positivas}}
+D--ENQUANTO-->F[notas < 0]
+F--FAÇA-->G{{Digite notas positivas}}
+G-->E
+C--SIM-->H{{Digite a quantidade de notas}}
+H-->I[/quantidade/]
+I-->J[i == notas ATE quantidade PASSO 1]
+J-->K[soma == soma + nota]
+K-->L{{A soma é igual à soma}}
+K-->J
+J-->L
+L-->M[media == soma / quantidade]
+M-->N[/media/]
+N-->O{{A média aritimetica é igual à media}}
+O-->P([FIM])
+```
+#### pseudocódigo
+```
+ALGORITIMO media_notas
+DECLARE notas, nota, soma, média : real
+INICIO
+soma == 0
+ESCREVA "Digite as notas"
+LEIA notas
+	ENQUANTO nota < 0 FAÇA
+	ESCREVA "Digite uma nota positiva"
+	LEIA notas
+ESCREVA "Digite a quantidade de notas"
+LEIA n
+PARA i ATE n PASSO 1 FAÇA 
+	soma = nota + soma 
+FIM_PARA
+media == soma / n 
+ESCREVA "A média aritimetica é igual a media"
+FIM
+
 
  	
  
