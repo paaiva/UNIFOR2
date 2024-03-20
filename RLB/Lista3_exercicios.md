@@ -72,7 +72,10 @@ PARA i ATE n PASSO 1 FAÇA
 FIM_PARA
 FIM_ALGORITIMO
 ```
-
+#### teste de mesa
+| i = 3 | n = 30 | soma = 0 | saída |
+| -- | -- | -- | -- |
+| true | true | true | "A contagem é igual a soma" |
 
 ### exercício 3
 #### Fluxograma
@@ -106,6 +109,12 @@ ESCREVA "Soma é igual a r"
 FIM
 FIM_ALGORITIMO
 ```
+
+#### teste de mesa 
+| Insira uma sequência de numeros | inteiros | soma | saída |
+| -- | -- | -- | -- |
+| 2, 3 ,4 ,10, 6 | true | 25 | "A soma é igual a 25" |
+| 2.5, 2.3, 5, 10 ,8 | false | | "A sequência deve ser inteira" |
 ### exercício 4
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas.
 #### Fluxograma 
@@ -149,8 +158,12 @@ FIM_PARA
 media == soma / n 
 ESCREVA "A média aritimetica é igual a media"
 FIM
-
-
+```
+#### teste de mesa 
+| notas | positivo | quantidade | soma | media | saída |
+| -- | -- | -- | -- | -- | -- |
+| 7.5, 7.5, 8, 9, 10 | true | 5 | 42 | 8.4 | "A média é igual a 8.4" |
+|-2,  10, 8, 2 , 3 , 4 | false | | | | "As notas devem ser positivas" |
  	
  
 
