@@ -144,18 +144,20 @@ O-->P([FIM])
 ALGORITIMO media_notas
 DECLARE notas, nota, soma, média : real
 INICIO
-soma == 0
-ESCREVA "Digite as notas"
-LEIA notas
-	ENQUANTO nota < 0 FAÇA
-	ESCREVA "Digite uma nota positiva"
-	LEIA notas
-ESCREVA "Digite a quantidade de notas"
+ESCREVA "Digite a nota"
+LEIA nota
+i = 1
+soma = 0
+	ENQUANTO nota > 0 FAÇA
+	soma = nota + soma
+	ESCREVA "Digite a quantidade de notas"
+LEIA n
+media = soma / n 
 LEIA n
 PARA i ATE n PASSO 1 FAÇA 
 	soma = nota + soma 
 FIM_PARA
-media == soma / n 
+media = soma / n 
 ESCREVA "A média aritimetica é igual a media"
 FIM
 ```
