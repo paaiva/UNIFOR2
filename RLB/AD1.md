@@ -32,14 +32,40 @@ ESCREVA "Digite o numero de alunos"
 LEIA n
 cont_aprovados = 0
 i = 1
-	ENQUANTO i <= n
-		ESCREVA "Obter nota"
-		LEIA nota
-			SE nota >= 50 and nota <= 10												
-				cont_aprovados = cont_aprovados + 1
-				ESCREVA "A contagem de aprovados é igual a cont_aprovados"
-			SENAO
-				i = +1
+ENQUANTO i <= n
+	ESCREVA "Obter nota"
+	LEIA nota
+		SE nota >= 50 and nota <= 10												
+			cont_aprovados = cont_aprovados + 1
+			ESCREVA "A contagem de aprovados é igual a cont_aprovados"
+		SENAO
+			i = +1
 FIM_ALGORITIMO
 ```
 ### exercício 3
+Dado um conjunto de n números, implemente e teste um algoritmo para calcular a soma desses números.
+Aceite apenas n maior ou igual a zero.
+#### pseudocódigo
+```
+DECLARE soma, num : real
+	      n, i : inteiro
+INICIO
+ESCREVA "Digite a quantidade de números: "
+LEIA n
+SE n >= 0
+	soma = 0
+	i = 1
+	ENQUANTO i <= n FAÇA
+		ESCREVA "Digite um número"
+		LEIA num
+		soma = soma + num
+		i = + 1 
+	ESCREVA "soma dos números é soma"
+SENAO
+	ESCREVA "O valor deve ser maior ou igual a 0"
+FIM_SE
+FIM_ALGORITIMO
+```
+### exercício 4
+
+### ex
