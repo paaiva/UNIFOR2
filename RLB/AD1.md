@@ -13,10 +13,10 @@ LEIA a
 ESCREVA "Digite o valor de b"
 LEIA b
 ESCREVA "valores iniciais a e b"
-a = aux 								// trocando os valor das variáveis 
+a = aux 					// trocando os valor das variáveis 
 a = b
 b = temp
-ESCREVA "Valor após a troca de A é a"	// novos valores das variaveis
+ESCREVA "Valor após a troca de A é a"		// novos valores das variaveis
 ESCREVA "Valor após a troca de B é B"
 FIM_ALGORITIMO
 ```
@@ -28,13 +28,13 @@ ALGORITIMO contador_de_notas
 DECLARE nota, notas: real
 	          cont_aprovados : inteiro
 INICIO
-cont_aprovados = 0
+cont_aprovados = 0								// Definir o contador para 0
 ESCREVA "Obter nota"
-LEIA nota 
+LEIA nota 									// ler os valores da variavel
 PARA nota ATE notas PASSO 1 FAÇA
-	SE nota >= 50 and nota <= 100
+	SE nota >= 50 and nota <= 100			
 		cont_aprovados = cont_aprovados + 1
-		ESCREVA "A contagem de aprovados é igual a cont_aprovados"
+		ESCREVA "A contagem de aprovados é igual a cont_aprovados"	// saída da contagem
 	FIM_SE
 FIM_ALGORITIMO
 ```
