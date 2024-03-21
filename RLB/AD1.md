@@ -47,6 +47,7 @@ Dado um conjunto de n números, implemente e teste um algoritmo para calcular a 
 Aceite apenas n maior ou igual a zero.
 #### pseudocódigo
 ```
+ALGORITIMO soma_numeros
 DECLARE soma, num : real
 	      n, i : inteiro
 INICIO
@@ -67,5 +68,24 @@ FIM_SE
 FIM_ALGORITIMO
 ```
 ### exercício 4
+Dado um conjunto de n termos da série, implemente e teste um algoritmo para calcular o valor de S
 
-### ex
+#### pseudocódigo 
+``` 
+ALGORITIMO calculo_s
+DECLARE numerador
+	denominador
+	n : inteiro
+	s, termo = real
+INICIO
+ESCREVA "Escreva o numero de termos da série s"
+LEIA n
+S = 0
+PARA i ATE n PASSO 1 FAÇA
+	numerador = 2 * i + 1
+	denominador = 2 * i + 2
+	termo = numerador / denominador
+	S += termo
+FIM_PARA
+ESCREVA "Soma da série s é S
+FIM_ALGORITIMO
