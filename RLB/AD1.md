@@ -28,15 +28,15 @@ ALGORITIMO contador_de_notas
 DECLARE nota : real
 	n,  cont_aprovados : inteiro
 INICIO
-ESCREVA "Digite o numero de alunos"
+ESCREVA "Digite o numero de alunos"							// identificar o numero de alunos
 LEIA n
 cont_aprovados = 0
 i = 1
-ENQUANTO i <= n
+ENQUANTO i <= n										// identificar se o aluno esta reprovado
 	ESCREVA "Obter nota"
 	LEIA nota
 		SE nota >= 50 and nota <= 10												
-			cont_aprovados = cont_aprovados + 1
+			cont_aprovados = cont_aprovados + 1				// realizar o calculo da contagem dos aprovados
 			ESCREVA "A contagem de aprovados é igual a cont_aprovados"
 		SENAO
 			i = +1
@@ -51,19 +51,19 @@ ALGORITIMO soma_numeros
 DECLARE soma, num : real
 	      n, i : inteiro
 INICIO
-ESCREVA "Digite a quantidade de números: "
+ESCREVA "Digite a quantidade de números: "			// gerar a quantidade de números
 LEIA n
 SE n >= 0
 	soma = 0
 	i = 1
-	ENQUANTO i <= n FAÇA
+	ENQUANTO i <= n FAÇA					//realizar a soma dos números
 		ESCREVA "Digite um número"
 		LEIA num
 		soma = soma + num
 		i = + 1 
-	ESCREVA "soma dos números é soma"
+	ESCREVA "soma dos números é soma"			// saída do resultado
 SENAO
-	ESCREVA "O valor deve ser maior ou igual a 0"
+	ESCREVA "O valor deve ser maior ou igual a 0"		// negar o número negativo inserido
 FIM_SE
 FIM_ALGORITIMO
 ```
@@ -78,10 +78,10 @@ DECLARE numerador
 	n : inteiro
 	s, termo = real
 INICIO
-ESCREVA "Escreva o numero de termos da série s"
+ESCREVA "Escreva o numero de termos da série s"			// Garantir o numero de termos da serie
 LEIA n
 S = 0
-PARA i ATE n PASSO 1 FAÇA
+PARA i ATE n PASSO 1 FAÇA					// realizar a soma da serie 
 	numerador = 2 * i + 1
 	denominador = 2 * i + 2
 	termo = numerador / denominador
@@ -97,17 +97,17 @@ Dado um número n, implemente e teste um algoritmo para calcular o fatorial de n
 ALGORITIMO n_fatorial
 DECLARE n, i, fator: inteiro
 INICIO 
-ESCREVA "Digite um numero inteiro não-negativo: "
+ESCREVA "Digite um numero inteiro não-negativo: "		// Inserir o numero positivo ou igual a 0
 LEIA n
 SE n >= 0
 	fator = 1
 	i = 1
 	PARA i ATE n PASSO 1 FAÇA
-		fator = fator * i
+		fator = fator * i				// realizar o calculo do fatorial
 	FIM_PARA
-	ESCREVA "O fatorial de n é fator"
+	ESCREVA "O fatorial de n é fator"			// saída do resultado
 SENAO 
-	ESCREVA "O valor deve ser maior igual a 0!"
+	ESCREVA "O valor deve ser maior igual a 0!"		// negação do valor inserido 
 FIM_SE
 FIM_ALGORITIMO
 ```
@@ -118,17 +118,17 @@ Gerar e imprimir os n primeiros termos da sequência de Fibonacci, onde n >= 1.
 ALGORITIMO fibonacci
 DECLARE n, a, b, i, termo_atual : inteiro
 INICIO
-ESCREVA "Numero de termos da sequência fibonacci"
+ESCREVA "Numero de termos da sequência fibonacci"	// identificar o número de termos
 LEIA n
-a = 0
+a = 0					
 b = 1
 i= 1
-PARA i ATE n PASSO 1 FAÇA
+PARA i ATE n PASSO 1 FAÇA				// realizar o cálculo do termo atual
 	termo_atual = a + b
 	a = b
 	b = termo_atual
 FIM_PARA
-ESCREVA "termo_atual é o termo atual"
+ESCREVA "termo_atual é o termo atual"			// saída do resultado
 FIM_ALGORITIMO
 ```
 ### exercício 7
@@ -137,17 +137,17 @@ Implemente e teste um algoritmo para inverter a ordem dos dígitos de um número
 ```
 DECLARE num, num_inv, digito : inteiro
 INICIO
-ESCREVA "Digite um número inteiro: "
+ESCREVA "Digite um número inteiro: "			// identificar o numero inteiro
 LEIA num
 SE  num >= 0
 	num_inv = 0
-	ENQUANTO num >= 0 FAÇA
+	ENQUANTO num >= 0 FAÇA				// inciar o loop
 		digito = num % 10
-		num_inv = num_inv * 10 + digito
+		num_inv = num_inv * 10 + digito		// cálculo de inversão
 		num = num // 10
-	ESCREVA "Numero invertido é num_inv"
+	ESCREVA "Numero invertido é num_inv"		// saída do resultado
 SENAO
-	ESCREVA "O numero deve ser positivo!"
+	ESCREVA "O numero deve ser positivo!"		// megação do numero inserido
 FIM_SE
 FIM_ALGORITIMO
 	
