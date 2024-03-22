@@ -89,3 +89,65 @@ PARA i ATE n PASSO 1 FAÇA
 FIM_PARA
 ESCREVA "Soma da série s é S
 FIM_ALGORITIMO
+```
+### exercício 5
+Dado um número n, implemente e teste um algoritmo para calcular o fatorial de n (escrito como n!), onde n >= 0.
+#### pseudocódigo
+```
+ALGORITIMO n_fatorial
+DECLARE n, i, fator: inteiro
+INICIO 
+ESCREVA "Digite um numero inteiro não-negativo: "
+LEIA n
+SE n >= 0
+	fator = 1
+	i = 1
+	PARA i ATE n PASSO 1 FAÇA
+		fator = fator * i
+	FIM_PARA
+	ESCREVA "O fatorial de n é fator"
+SENAO 
+	ESCREVA "O valor deve ser maior igual a 0!"
+FIM_SE
+FIM_ALGORITIMO
+```
+### exercício 6
+Gerar e imprimir os n primeiros termos da sequência de Fibonacci, onde n >= 1.
+#### pseudocódigo
+```
+ALGORITIMO fibonacci
+DECLARE n, a, b, i, termo_atual : inteiro
+INICIO
+ESCREVA "Numero de termos da sequência fibonacci"
+LEIA n
+a = 0
+b = 1
+i= 1
+PARA i ATE n PASSO 1 FAÇA
+	termo_atual = a + b
+	a = b
+	b = termo_atual
+FIM_PARA
+ESCREVA "termo_atual é o termo atual"
+FIM_ALGORITIMO
+```
+### exercício 7
+Implemente e teste um algoritmo para inverter a ordem dos dígitos de um número inteiro positi
+#### pseudocódigo
+```
+DECLARE num, num_inv, digito : inteiro
+INICIO
+ESCREVA "Digite um número inteiro: "
+LEIA num
+SE  num >= 0
+	num_inv = 0
+	ENQUANTO num >= 0 FAÇA
+		digito = num % 10
+		num_inv = num_inv * 10 + digito
+		num = num // 10
+	ESCREVA "Numero invertido é num_inv"
+SENAO
+	ESCREVA "O numero deve ser positivo!"
+FIM_SE
+FIM_ALGORITIMO
+	
