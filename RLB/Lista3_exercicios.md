@@ -149,9 +149,8 @@ LEIA nota
 i = 1
 soma = 0
 	ENQUANTO nota > 0 FAÇA
-	soma = nota + soma
-	ESCREVA "Digite a quantidade de notas"
-LEIA n
+		soma = nota + soma
+		ESCREVA "Digite a quantidade de notas"
 media = soma / n 
 LEIA n
 PARA i ATE n PASSO 1 FAÇA 
